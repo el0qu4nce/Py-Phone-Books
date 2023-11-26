@@ -1,6 +1,6 @@
 import sqlite3
 
-
+# func to add person to database
 def add_person():
     name = input("Enter the person's name: ")
     number = input("Enter the person's phonenumber: ")
@@ -12,7 +12,7 @@ def add_person():
     print("Ready!")
     # if "Ready" message appears, the sql works!
 
-
+# func to find person in database
 def see_user():
     name = input("Enter the person's name: ")
     connection = sqlite3.connect("phone_dict.db")
@@ -23,12 +23,12 @@ def see_user():
             print(f"There is {i[1]} with phonenumber {i[0]}")
             break
 
-
+# getting function we need
 def get_status_code():
     status_code = int(input("Do you want to add person (1) or find person?(2)"))
     return status_code
 
-
+# func for choosing option
 def work_with_db(status):
     if status == 1:
         add_person()
