@@ -1,4 +1,4 @@
-from classes_for_sqlphonebook import get_status_code, work_with_db
+from funcs_for_sqlphonebook import get_status_code, work_with_db
 
 
 def start():
